@@ -11,13 +11,32 @@
         {id: 1, text: 'Flower', amount: -19.99},
         {id: 2, text: 'Salary', amount: 299.97},
         {id: 3, text: 'Book', amount: -10},
-        {id: 4, text: 'Camera', amount: 150},
+        {id: 4, text: 'Camera', amount: -150},
     ]);
 
+  //get total
   const total = computed(() => {
     return transactions.value.reduce((acc, transaction) => {
       return acc + transaction.amount;
-    },0);
+    },0).toFixed(2);
+  });
+
+//get income
+const income = computed(() => {
+    return transactions.value
+    .filter((transaction)=> transaction.amount > 0)
+    .reduce((acc, transaction) => {
+      return acc + transaction.amount;
+    },0).toFixed(2);
+  });
+
+//get expenses
+const expenses = computed(() => {
+    return transactions.value
+    .filter((transaction)=> transaction.amount < 0)
+    .reduce((acc, transaction) => {
+      return acc + transaction.amount;
+    },0).toFixed(2);
   });
 </script>
 
@@ -25,7 +44,7 @@
   <Header />
     <div class="container">
       <Balance :total="total" />
-      <IncomeExpenses />
+      <IncomeExpenses :income="income" :expenses="expenses"/>
       <TransactionList :transactions="transactions"/>
       <AddTransaction />
     </div>
