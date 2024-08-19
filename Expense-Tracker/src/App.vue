@@ -9,9 +9,9 @@
 
   const transactions = ref ([
         {id: 1, text: 'Flower', amount: -19.99},
-        {id: 2, text: 'Salary', amount: 219.99},
-        {id: 3, text: 'Book', amount: -29.99},
-        {id: 4, text: 'Camera', amount: -150},
+        {id: 2, text: 'Salary', amount: 299.97},
+        {id: 3, text: 'Book', amount: -10},
+        {id: 4, text: 'Camera', amount: 150},
     ]);
 
   const total = computed(() => {
