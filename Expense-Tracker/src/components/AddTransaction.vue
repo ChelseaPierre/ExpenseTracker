@@ -15,7 +15,7 @@ import {useToast} from 'vue-toastification'
             toast.error('Both fields must be filled');
             return;
         };
-        if(amount.value != Number){
+        if(isNaN(amount.value) || amount.value === ''){
             toast.error('Must be numerical');
             return;
         };
@@ -33,13 +33,11 @@ import {useToast} from 'vue-toastification'
 
 <template>
     <h3>New Transaction</h3>
-    <form id="form" @submit.prevent="onsubmit">
+    <form id="form" @submit.prevent="onsubmit" >
         <div class="form-control">
-            <label for="text"></label>
-            <input type="text" id="text" v-model="text" placeholder="Transaction Type" /> 
+            <label for="text"> </label>
+            <input class="form-style" type="text" id="text" v-model="text" placeholder="Transaction Type..." /> 
         </div>
-
-
         <div class="form-control">
             <label for="amount"></label>
             <input type="text" id="amount" v-model="amount" placeholder="$0.00" />
