@@ -9,20 +9,32 @@
 }
 
 body {
-  background-color: #f7f7f7;
-  display: flex;
+  color: #453241;
+  background-color: #795872;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   margin: 0;
-  font-family: 'Lato', sans-serif;
-  font-size: 18px;
+  font-family: 'Segoe ui', sans-serif;
+  font-size: 32px;
+  opacity: 90%;
+}
+
+.header-logo{
+  text-align: left;
+  background-color: #8A6583;
+}
+
+.logo{
+  opacity: 0.9;
+  height: 150px;
+  align-content: left;
 }
 
 .container {
-  margin: 30px auto;
-  width: 400px;
+  margin: 200px auto;
+  width: 500px;
 }
 
 h1 {
@@ -31,7 +43,7 @@ h1 {
 }
 
 h3 {
-  border-bottom: 1px solid #bbb;
+  border-bottom: 1px solid #8A6583;
   padding-bottom: 10px;
   margin: 40px 0 10px;
 }
@@ -42,7 +54,7 @@ h4 {
 }
 
 .inc-exp-container {
-  background-color: #fff;
+  background-color: #8A6583;
   box-shadow: var(--box-shadow);
   padding: 20px;
   display: flex;
@@ -56,21 +68,22 @@ h4 {
 }
 
 .inc-exp-container > div:first-of-type {
-  border-right: 1px solid #dedede;
+  border-right: 1px solid #453241;
 }
 
 .money {
-  font-size: 20px;
+  font-size: 30px;
+  font-weight: bold;
   letter-spacing: 1px;
   margin: 5px 0;
 }
 
 .money.plus {
-  color: #2ecc71;
+  color: #9DFF85;
 }
 
 .money.minus {
-  color: #c0392b;
+  color: #FF8080;
 }
 
 label {
@@ -80,23 +93,24 @@ label {
 
 input[type='text'],
 input[type='number'] {
-  border: 1px solid #dedede;
+  border: 1px solid #453241;
   border-radius: 2px;
   display: block;
-  font-size: 16px;
+  font-size: 30px;
   padding: 10px;
   width: 100%;
 }
 
 .btn {
   cursor: pointer;
-  background-color: #9c88ff;
+  color: #8A6583;
   box-shadow: var(--box-shadow);
-  color: #fff;
+  background-color: #453241;
   border: 0;
   display: block;
-  font-size: 16px;
-  margin: 10px 0 30px;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px 0 30px;
   padding: 10px;
   width: 100%;
 }
@@ -113,9 +127,10 @@ input[type='number'] {
 }
 
 .list li {
-  background-color: #fff;
+  background-color: #8A6583;
   box-shadow: var(--box-shadow);
-  color: #333;
+  color: #453241;
+  font-weight: bold;
   display: flex;
   justify-content: space-between;
   position: relative;
@@ -124,18 +139,18 @@ input[type='number'] {
 }
 
 .list li.plus {
-  border-right: 5px solid #2ecc71;
+  border-right: 5px solid #9DFF85;
 }
 
 .list li.minus {
-  border-right: 5px solid #c0392b;
+  border-right: 5px solid #FF8080;
 }
 
 .delete-btn {
   cursor: pointer;
-  background-color: #e74c3c;
+
   border: 0;
-  color: #fff;
+  color: #453241;
   font-size: 20px;
   line-height: 20px;
   padding: 2px 5px;
@@ -149,4 +164,12 @@ input[type='number'] {
 
 .list li:hover .delete-btn {
   opacity: 1;
+}
+
+.form{
+  background-color: #453241;
+}
+form-control{
+  background-color: #453241;
+  color: #453241;
 }
