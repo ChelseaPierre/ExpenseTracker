@@ -14,7 +14,11 @@ import {useToast} from 'vue-toastification'
         if(!text.value || !amount.value){
             toast.error('Both fields must be filled');
             return;
-        }
+        };
+        if(amount.value != Number){
+            toast.error('Must be numerical');
+            return;
+        };
         const transactionData = {
             text: text.value,
             amount: parseFloat(amount.value),
@@ -28,17 +32,17 @@ import {useToast} from 'vue-toastification'
 </script>
 
 <template>
-    <h3>Add new transaction</h3>
+    <h3>New Transaction</h3>
     <form id="form" @submit.prevent="onsubmit">
         <div class="form-control">
-            <label for="text">Text</label>
-            <input type="text" id="text" v-model="text" placeholder="Enter text..." /> 
+            <label for="text"></label>
+            <input type="text" id="text" v-model="text" placeholder="Transaction Type" /> 
         </div>
+
+
         <div class="form-control">
-            <label for="amount">
-                Amount <br /> (negative - expense, positive - income)
-            </label>
-            <input type="text" id="amount" v-model="amount" placeholder="Enter amount..." />
+            <label for="amount"></label>
+            <input type="text" id="amount" v-model="amount" placeholder="$0.00" />
         </div>
         <button class="btn">Add transaction</button>
     </form>
