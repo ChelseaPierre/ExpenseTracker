@@ -17,7 +17,7 @@ body {
   min-height: 100vh;
   margin: 0;
   font-family: 'Segoe ui', sans-serif;
-  font-size: 32px;
+  font-size: 20px;
   opacity: 90%;
 }
 
@@ -33,7 +33,7 @@ body {
 }
 
 .container {
-  margin: 200px auto;
+  margin: 100px auto;
   width: 500px;
 }
 
@@ -60,6 +60,7 @@ h4 {
   display: flex;
   justify-content: space-between;
   margin: 20px 0;
+  border-radius: 30px;
 }
 
 .inc-exp-container > div {
@@ -72,7 +73,7 @@ h4 {
 }
 
 .money {
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
   letter-spacing: 1px;
   margin: 5px 0;
@@ -96,7 +97,7 @@ input[type='number'] {
   border: 1px solid #453241;
   border-radius: 2px;
   display: block;
-  font-size: 30px;
+  font-size: 20px;
   padding: 10px;
   width: 100%;
 }
@@ -108,14 +109,21 @@ input[type='number'] {
   background-color: #453241;
   border: 0;
   display: block;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
-  margin: 20px 0 30px;
+  margin: 40px 0 30px;
   padding: 10px;
   width: 100%;
+  border-radius: 30px;
+  
 }
 
-.btn:focus,
+.btn:hover, .btn:focus{
+  background-color: #795872;
+  color:#453241;
+  opacity: 80%;
+}
+
 .delete-btn:focus {
   outline: 0;
 }
@@ -136,22 +144,24 @@ input[type='number'] {
   position: relative;
   padding: 10px;
   margin: 10px 0;
+  text-transform: capitalize;
+  border-radius: 30px;
 }
 
 .list li.plus {
-  border-right: 5px solid #9DFF85;
+  border-right: 8px solid #9DFF85;
 }
 
 .list li.minus {
-  border-right: 5px solid #FF8080;
+  border-right: 8px solid #FF8080;
 }
 
 .delete-btn {
   cursor: pointer;
-
   border: 0;
   color: #453241;
-  font-size: 20px;
+  background-color: transparent;
+  font-size: 30px;
   line-height: 20px;
   padding: 2px 5px;
   position: absolute;
@@ -166,10 +176,18 @@ input[type='number'] {
   opacity: 1;
 }
 
-.form{
-  background-color: #453241;
+.form-style{
+  background-color: #8A6583;
+  color: 453241;
+  box-shadow: var(--box-shadow);
+  font-style: italic;
+  outline: none;
 }
-form-control{
-  background-color: #453241;
-  color: #453241;
+.form-style:focus{
+  border : 5px solid #453241;
+  opacity: 80%;
+}
+
+.form-control{
+  margin-top: 40px;
 }

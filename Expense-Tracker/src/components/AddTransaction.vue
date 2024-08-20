@@ -33,15 +33,13 @@ import {useToast} from 'vue-toastification'
 
 <template>
     <h3>New Transaction</h3>
-    <form id="form" @submit.prevent="onsubmit" >
+    <form id="form" @submit.prevent="onsubmit" autocomplete="off">
         <div class="form-control">
-            <label for="text"> </label>
-            <input class="form-style" type="text" id="text" v-model="text" placeholder="Transaction Type..." /> 
+            <input style="border-radius: 30px" class="form-style" type="text" id="text" v-model="text" placeholder="Transaction Type..." /> 
         </div>
         <div class="form-control">
-            <label for="amount"></label>
-            <input type="text" id="amount" v-model="amount" placeholder="$0.00" />
+            <input style="border-radius: 30px" class="form-style" type="text" id="amount" v-model="amount" placeholder="$0.00" />
         </div>
-        <button class="btn">Add transaction</button>
+        <button class="btn">Add Transaction</button>
     </form>
 </template>
